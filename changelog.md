@@ -3,6 +3,18 @@
 Format inspiré de [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/), versionnage
 [SemVer](https://semver.org/lang/fr/).
 
+## [1.1.0] 2026-08-02
+
+### Ajouté
+- Lien « ℹ️ Comment ce jeu a été fait » (écran de menu) ouvrant une modale avec la stack,
+  les graphismes, la musique, les interactions, l'architecture et les algorithmes notables
+  (terrain en courbe de hauteurs, cratères circulaires, 15 armes, 4 factions). Étape 15 du
+  chantier de retrofit décrit dans `todo.md` racine du monorepo.
+
+### Vérifié
+- Build propre, modale testée à l'ouverture/fermeture, aucune erreur console, aucun
+  débordement horizontal en 390×844 (écran de menu et écran de jeu).
+
 ## [1.0.0] 2026-08-01
 
 Première version intégrable à Hylst.Games, partie d'un export brut audité puis corrigé.

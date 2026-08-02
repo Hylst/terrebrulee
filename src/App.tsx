@@ -70,6 +70,7 @@ export default function App() {
   // ─── Audio ───
   const [sfxEnabled,   setSfxEnabled]   = useState(true);
   const [musicEnabled, setMusicEnabled] = useState(false);
+  const [showInfo, setShowInfo] = useState(false);
 
   // ─── Input refs ───
   const keysRef        = useRef<Set<string>>(new Set());
@@ -734,7 +735,33 @@ export default function App() {
             <p>• <b className="text-white">+ / -</b> → zoom clavier • <b className="text-white">1-9, Z/X/C/V</b> → armes</p>
             <p>• <b className="text-white">Tactile :</b> 1 doigt sur le char = viser • 1 doigt ailleurs = panoramique • 2 doigts = pincer/zoomer + panoramique</p>
           </div>
+
+          <button
+            onClick={() => setShowInfo(true)}
+            className="mt-4 text-slate-500 text-xs underline decoration-dotted hover:text-slate-300 transition-colors cursor-pointer"
+          >
+            ℹ️ Comment ce jeu a été fait
+          </button>
         </div>
+
+        {showInfo && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/75 backdrop-blur-sm p-4" onClick={() => setShowInfo(false)}>
+            <div className="w-full max-w-lg max-h-[85vh] overflow-y-auto rounded-2xl bg-slate-900 border border-slate-700 shadow-2xl" onClick={e => e.stopPropagation()}>
+              <div className="p-6 space-y-3.5 text-sm leading-relaxed text-slate-300">
+                <h3 className="text-xl font-black bg-gradient-to-r from-amber-400 via-orange-400 to-red-500 bg-clip-text text-transparent">Comment ce jeu a été fait</h3>
+                <p><strong className="text-white">Stack :</strong> React 19, TypeScript 5.9, Tailwind CSS 4, Vite 7, compilé en un seul fichier HTML, aucune dépendance chargée depuis l'extérieur.</p>
+                <p><strong className="text-white">Graphismes :</strong> tout est dessiné en Canvas 2D à chaque image (terrain, chars, projectiles, ciel selon le thème choisi), aucun sprite ni image externe.</p>
+                <p><strong className="text-white">Musique &amp; sons :</strong> synthétisés en direct avec l'API Web Audio, aucun fichier audio chargé.</p>
+                <p><strong className="text-white">Interactions :</strong> glisser depuis son char pour viser et régler la puissance, glisser ailleurs pour déplacer la vue, molette ou pincement tactile pour zoomer, raccourcis clavier complets (déplacement, angle, puissance, armes, tir).</p>
+                <p><strong className="text-white">Architecture :</strong> logique de jeu pure (<code>game.ts</code>) et rendu Canvas (<code>renderer.ts</code>) dans des modules séparés, 4 factions aux caractéristiques différentes (dont une plus mobile), IA à 3 niveaux de difficulté.</p>
+                <p><strong className="text-white">Algorithmes notables :</strong> le terrain est une simple courbe de hauteurs par colonne, chaque explosion creuse un cratère circulaire en relevant la hauteur des colonnes touchées. 15 armes aux effets différents (rebond, forage, tir groupé, frappe aérienne, téléportation...), chacune avec son propre rayon d'explosion.</p>
+              </div>
+              <div className="border-t border-slate-800 p-4 text-center">
+                <button onClick={() => setShowInfo(false)} className="px-6 py-2.5 rounded-xl font-black text-white bg-gradient-to-r from-amber-500 to-red-500 hover:brightness-110 active:scale-95 transition-all">Fermer</button>
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     );
   }
