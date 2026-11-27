@@ -5,7 +5,7 @@
 - ✅ Duel de chars au tour par tour, terrain entièrement destructible
 - ✅ 15 armes aux effets distincts (zone, rebonds, forage souterrain, guidage, tir en
   éventail, frappe aérienne, téléportation, mines, incendie étendu, faille sismique...)
-- ✅ 4 factions aux bonus propres : Titan (130 PV), Valkyrie (mobilité doublée,
+- ✅ 2 factions jouables aux bonus propres : Titan (130 PV), Valkyrie (mobilité doublée,
   **désormais réellement doublée à chaque tour, bug corrigé — voir todo.md**), Aegis
   (bouclier initial + régénération passive), Inferno (arsenal incendiaire renforcé)
 - ✅ Vent variable affectant la trajectoire, caméra avec suivi automatique du projectile

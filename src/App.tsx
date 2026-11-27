@@ -709,7 +709,7 @@ export default function App() {
             Terre Brûlée
           </h1>
           <p className="text-xl text-slate-300 font-semibold mb-1">Simulation de combat blindé destructible</p>
-          <p className="text-amber-400 font-bold text-lg mb-8">🎖️ Créé par Geoffroy</p>
+          <p className="text-amber-400 font-bold text-lg mb-8">🎖️ Créé par Geoffroy Streit (Hylst) avec l'aide d'une IA</p>
 
           <div className="space-y-3 mb-8">
             <p className="text-slate-400 text-sm mb-4">Choisissez votre mode de combat :</p>
@@ -753,7 +753,7 @@ export default function App() {
                 <p><strong className="text-white">Graphismes :</strong> tout est dessiné en Canvas 2D à chaque image (terrain, chars, projectiles, ciel selon le thème choisi), aucun sprite ni image externe.</p>
                 <p><strong className="text-white">Musique &amp; sons :</strong> synthétisés en direct avec l'API Web Audio, aucun fichier audio chargé.</p>
                 <p><strong className="text-white">Interactions :</strong> glisser depuis son char pour viser et régler la puissance, glisser ailleurs pour déplacer la vue, molette ou pincement tactile pour zoomer, raccourcis clavier complets (déplacement, angle, puissance, armes, tir).</p>
-                <p><strong className="text-white">Architecture :</strong> logique de jeu pure (<code>game.ts</code>) et rendu Canvas (<code>renderer.ts</code>) dans des modules séparés, 4 factions aux caractéristiques différentes (dont une plus mobile), IA à 3 niveaux de difficulté.</p>
+                <p><strong className="text-white">Architecture :</strong> logique de jeu pure (<code>game.ts</code>) et rendu Canvas (<code>renderer.ts</code>) dans des modules séparés, 2 factions jouables aux caractéristiques différentes (Titan et Valkyrie), IA à 3 niveaux de difficulté.</p>
                 <p><strong className="text-white">Algorithmes notables :</strong> le terrain est une simple courbe de hauteurs par colonne, chaque explosion creuse un cratère circulaire en relevant la hauteur des colonnes touchées. 15 armes aux effets différents (rebond, forage, tir groupé, frappe aérienne, téléportation...), chacune avec son propre rayon d'explosion.</p>
               </div>
               <div className="border-t border-slate-800 p-4 text-center">
@@ -779,7 +779,7 @@ export default function App() {
             </h1>
             <p className="text-slate-400 text-xs mt-1">
               {gameMode === 'pvp' ? '👥 Mode 1v1 Local' : `🤖 Mode vs IA (${aiDifficulty === 'easy' ? 'Facile' : aiDifficulty === 'medium' ? 'Moyen' : 'Difficile'})`}
-              {' • '}<span className="text-amber-400 font-semibold">Créé par Geoffroy</span>
+              {' • '}<span className="text-amber-400 font-semibold">Créé par Geoffroy Streit (Hylst) avec l'aide d'une IA</span>
             </p>
           </div>
           <div className="flex items-center gap-2 bg-slate-900/90 border border-slate-800 p-2 rounded-xl flex-wrap justify-center">

@@ -28,7 +28,7 @@ ravitaillement, évitez les mines, et faites exploser les barils pour des dégâ
 
 - 15 armes (standard, fragmentation, nucléaire, rebond, foreuse, sniper, salve triple,
   frappe aérienne, téléporteur, mine, napalm, railgun, missile guidé, onde sismique...)
-- 4 factions aux bonus distincts : Titan (PV élevés), Valkyrie (mobilité doublée), Aegis
+- 2 factions jouables aux bonus distincts : Titan (PV élevés), Valkyrie (mobilité doublée), Aegis
   (bouclier régénérant), Inferno (arsenal incendiaire)
 - Terrain entièrement destructible, vent variable, 6 thèmes de ciel
 - Mode 1v1 local ou contre une IA à 3 niveaux de difficulté
